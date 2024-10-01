@@ -1,0 +1,158 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+div,
+p,
+a,
+button,
+input {
+  letter-spacing: 1px;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 67px 15px 0;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+.title {
+  margin-bottom: 41px;
+}
+
+.form-wrapper {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 51px;
+}
+
+.input-wrapper {
+  display: inline-flex;
+  padding-left: 22px;
+  border: 1px solid #000;
+  overflow: hidden;
+  width: 484px;
+  height: 58px;
+}
+
+.input__currency {
+  padding: 10px 17px 9px 3px;
+}
+
+.input__expense {
+  width: 100%;
+  font-family: inherit;
+  font-size: 32px;
+  border: none;
+  outline: none;
+}
+
+.add-button {
+  width: 370px;
+  padding: 10px 0 9px;
+  color: #fff;
+  background-color: #0094FF;
+  border: none;
+}
+
+.info-wrapper {
+  display: flex;
+  gap: 28px;
+}
+
+.expenses-wrapper {
+  width: 484px;
+}
+
+.limit-title {
+  margin-bottom: 13px;
+}
+
+.total-sum-title {
+  margin-bottom: 35px;
+}
+
+.limit,
+.sum,
+.status {
+  font-weight: 400;
+}
+
+.currency {
+  font-weight: 400;
+}
+
+.history-title {
+  margin-bottom: 21px;
+}
+
+.history-list {
+  list-style-position: inside;
+}
+
+.status-title {
+  margin-bottom: 112px;
+}
+
+.status {
+ color: green;
+}
+
+.status_red {
+  color: red;
+}
+
+.reset-expenses__btn {
+  width: 100%;
+  padding: 11px 0 8px;
+  color: #fff;
+  background-color: #FF0000;
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    flex-direction: column;
+  }
+
+  .info-wrapper {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .input-wrapper{
+    width: 100%;
+  }
+
+  .expenses-wrapper {
+    width: 100%;
+  }
+}
+
+
+
+
