@@ -17,30 +17,68 @@
 <body>
   <div class="container">
     <h1 class="title">Учет расходов</h1>
-
-    <div class="form-wrapper">
-      <div class="input-wrapper">
-        <input 
-        class="js-expense-input input__expense" 
-        type="number">
-        <span class="input__currency">руб.</span>
+    <div class="row">
+      <div class="col input-col">
+        <div class="money-input__wrapper currency">
+          <input
+          id = "expenseInput"
+          class="money-input__input"
+          type="number" min="0">
+        </div>
+        <select id="CategorySelect" class="category-select">
+            <option hidden disabled selected value="Категория">
+              Категории
+            </option>
+            <option value="Кафе">Кафе и рестораны</option>
+            <option value="Транспорт">Транспорт</option>
+            <option value="Аптека">Аптека</option>
+            <option value="Развечения">Развлечения</option>
+        </select>
       </div>
-      <button class="js-add-button add-button">Добавить</button>
+      <div class="col">
+       <button id="addButton" class="add-button">Добавить</button>
+      </div>
     </div>
 
-  
-    <div class="info-wrapper">
-      <div class="expenses-wrapper">
-        <h2 class="limit-title">Лимит: <span class="js-limit limit"></span> <span class="currency">руб.</span></h2>
-        <h2 class="total-sum-title">Всего: <span class="js-sum sum"></span> <span class="currency">руб.</span></h2>
-        <h2 class="status-title">Статус: <span class="js-status status">все хорошо</span></h2>
-        <button class="reset-expenses__btn js-reset-expenses">Сбросить расходы</button>
-      </div>
-      <div class="history-wrapper">
-        <h2 class="history-title">История:</h2>
-        <div class="js-history history-list"></div>
-      </div>
+    <div class="row">
+      <div class="col">
+        <div class="stats">
+          <div class="stats__limit">
+            <span class="label">Лимит:</span>
+            <span id="limitValue" class="currency">10000</span>
+            <button id="changeLimitButton" class="stats__change-limit-button"></button>
+          </div>
+        </div>
 
+        <div id="popup" class="popup">
+          <div id="popupContent" class="popup__content">
+            <div id="popupCloseButton" class="popup__close-button"></div>
+            <p class="popup__title">Новый лимит</p>
+            <div class="popup__form-wrapper">
+              <div class="popup__input-wrapper currency">
+                <input
+                id="limitInput"
+                class="popup__input-limit"
+                type="number">
+              </div>
+              <button id="setLimitButton" class="popup__set-limit-btn">Задать лимит</button>
+            </div>
+          </div>
+        </div>
+        <div class="stats__total">
+          <span class="label">Всего:</span>
+          <span id="totalValue" class="currency">0</span>
+        </div>
+        <div class="stats__status">
+          <span class="label">Статус:</span>
+          <span id="statusText" class="stats__status_positive">все хорошо</span>
+        </div>
+        <button id="resetButton" class="reset-button">Сбросить расходы</button>
+      </div>
+      <div class="col">
+        <h2 class="label">История:</h2>
+        <ol id="historyList" class="history-list"></ol>
+      </div>
     </div>
   </div>
   
