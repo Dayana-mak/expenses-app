@@ -1,3 +1,5 @@
+"use strict";
+
 const STATUS_IN_LIMIT = "все хорошо";
 const STATUS_OUT_OF_LIMIT = "все плохо";
 const STATUS_IN_LIMIT_CLASSNAME = "stats__status_positive";
@@ -8,7 +10,7 @@ const addButtonNode = document.getElementById("addButton");
 const resetButtonNode = document.getElementById("resetButton");
 const totalValueNode = document.getElementById("totalValue");
 const statusNode = document.getElementById("statusText");
-const historyNode = document.getElementById("historyList");
+const historyList = document.getElementById("historyList");
 const categorySelectNode = document.getElementById("CategorySelect");
 
 const limitNode = document.getElementById("limitValue");
